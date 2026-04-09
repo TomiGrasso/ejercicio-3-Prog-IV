@@ -2,6 +2,7 @@ package models;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Producto {
     private Long id;
@@ -12,8 +13,9 @@ public class Producto {
     private String emailProveedor;
     private LocalDate fechaVencimiento;
     private String codigoSKU;
+    private LocalDateTime fechaRegistro;
 
-    public Producto(Long id, String nombre, String descripcion, BigDecimal precio, Integer stock, String emailProveedor, LocalDate fechaVencimiento, String codigoSKU) {
+    public Producto(Long id, String nombre, String descripcion, BigDecimal precio, Integer stock, String emailProveedor, LocalDate fechaVencimiento, String codigoSKU, LocalDateTime fechaRegistro) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -22,6 +24,7 @@ public class Producto {
         this.emailProveedor = emailProveedor;
         this.fechaVencimiento = fechaVencimiento;
         this.codigoSKU = codigoSKU;
+        this.fechaRegistro = fechaRegistro;
     }
 
     public Producto(){}
@@ -88,5 +91,13 @@ public class Producto {
 
     public void setCodigoSKU(String codigoSKU) {
         this.codigoSKU = codigoSKU;
+    }
+
+    public LocalDateTime getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(LocalDateTime fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
 }
