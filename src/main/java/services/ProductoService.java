@@ -1,18 +1,31 @@
 package services;
 
+import dtos.ProductoRequestDTO;
 import dtos.ProductoResponseDTO;
 import models.Producto;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProductoService {
 
     private List<Producto> productos = new ArrayList<>();
     Long contadorId = 1L;
 
-    public ProductoResponseDTO agregarProducto(Producto producto){
+    public ProductoResponseDTO agregarProducto(ProductoRequestDTO dto){
+
+        Producto producto = new Producto();
+        producto.setNombre(dto.getNombre());
+        producto.setDescripcion(dto.getDescripcion());
+        producto.setPrecio(dto.getPrecio());
+        producto.setStock(dto.getStock());
+        producto.setEmailProveedor(dto.getEmailProveedor());
+        producto.setFechaVencimiento(dto.getFechaVencimiento());
+        producto.setCodigoSKU(dto.getCodigoSKU());
+
         producto.setId(contadorId);
         producto.setFechaRegistro(LocalDateTime.now());
 
