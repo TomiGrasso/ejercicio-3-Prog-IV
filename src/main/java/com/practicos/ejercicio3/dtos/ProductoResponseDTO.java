@@ -1,4 +1,4 @@
-package dtos;
+package com.practicos.ejercicio3.dtos;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

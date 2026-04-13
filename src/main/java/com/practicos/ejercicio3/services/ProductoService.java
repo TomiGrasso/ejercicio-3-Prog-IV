@@ -1,8 +1,8 @@
-package services;
+package com.practicos.ejercicio3.services;
 
-import dtos.ProductoRequestDTO;
-import dtos.ProductoResponseDTO;
-import models.Producto;
+import com.practicos.ejercicio3.dtos.ProductoRequestDTO;
+import com.practicos.ejercicio3.dtos.ProductoResponseDTO;
+import com.practicos.ejercicio3.models.Producto;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

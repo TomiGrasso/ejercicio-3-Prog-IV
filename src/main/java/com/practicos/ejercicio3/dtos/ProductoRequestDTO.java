@@ -1,4 +1,4 @@
-package dtos;
+package com.practicos.ejercicio3.dtos;
 
 import jakarta.validation.constraints.*;
 
